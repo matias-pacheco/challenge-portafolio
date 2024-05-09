@@ -18,6 +18,9 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+
+    /*Color de fuente*/
+    color: #464646;
 }
 ol, ul,li {
     list-style: none;
@@ -25,6 +28,28 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+/*----- Estilización de texto compartida en diferentes secciones ------*/
+/* Titulos Resaltados con mayor tamaño*/
+.titulo-en-comun{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+}
+
+/* Parrafos */
+.texto-en-comun{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.44px;
+}
+
+.texto-resaltado{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -39,74 +64,291 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
-/*Sección Menu*/
-
+/*---------- S e c c i ó n    M e n u ----------*/
 section.menu{
-
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
 }
 
-/*Sección Title*/
+.menu__header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.menu__list{
+    display: none;
+}
+
+.menu__list__item:nth-child(6){
+    display: none;
+}
+
+.menu nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu__list__item__contato a{
+    color: #464646;
+}
+
+/*---------- S e c c i ó n    T i t l e ----------*/
 section.title{
-
+    padding: 16px;
 }
 
-/*Sección About*/
+.title__profile{
+    width: 98px;
+}
 
+.title__network{
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.title__network__item a{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.44px;
+    color: #464646;
+}
+
+
+/*---------- S e c c i ó n    A b o u t ----------*/
 section.about{
-
+    background-color: #EAF2FD;
+    padding: 16px;
 }
 
-/*Sección Hobbies*/
+/*---------- S e c c i ó n    S k i l l s    &    S e c c i ó n    H o b b i e s ----------*/
+.seccion-iconos{
+    padding: 16px;
+}
+
+.titulo-iconos{
+    text-align: center;
+}
+
+.cajas-de-iconos{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icono-caja{
+    background-color: #FFFFFF;
+    width: 156px;
+    height: 118px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.icono-caja ul{
+    padding: 15px;
+    margin: 0;
+}
 
 section.hobbies{
     
 }
 
-/* Experiencia Académica*/
-
+/*---------- E x p e r i e n c i a    A c a d é m i c a ----------*/
 section.academic{
-
+    background-color: #EAF2FD;
+    padding: 32px;
 }
 
-/* experiencia*/
+.academic__title{
+    text-align: center;
+}
 
+.academic__courses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.academic__courses__list{
+    padding: 0;
+}
+
+.academic__courses__item__img{
+    background-color: white;
+    padding: 16px;
+    width: 296px;
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.establecimiento1_img{
+    width: 84px;
+    height: 58px;
+}
+
+.establecimiento2_img{
+    width: 70px;
+    height: 48px;
+}
+
+.establecimiento3_img{
+    width: 102px;
+    height: 60px;
+}
+
+
+/*---------- E x p e r i e n c i a ----------*/
 section.experience{
-
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    padding-top: 32px;
 }
 
-/*Contacto*/
+.experience__section__title{
+    text-align: center;
+}
+
+.experience__box{
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience__img{
+    width: 296px;
+    height: 144px;
+}
+
+.experience__info-container{
+    width: 296px;
+}
+
+.experience__title{
+    font-size: 16px;
+}
+
+.experience__text{
+    font-size: 14px;
+}
+
+.exp-boton{
+    width: 108px;
+    height: 40px;
+    color: #2A7AE4;
+    border-radius: 1px;
+    border-color: #2A7AE4;
+    /*padding: 12px, 16px, 12px, 16px;*/
+
+    background-color: var(--cor-de-fundo);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.44px;
+    font-family: 'Raleway';
+}
+
+.experience__botao--demo{
+    width: 96px;
+    border: none;
+    background-color: #2A7AE4;
+
+    color: var(--cor-de-fundo);
+}
+
+/*---------- C o n t a c t o ----------*/
 
 section.formcontato{
-
+    background-color: #EAF2FD;
+    padding: 32px;
 }
 
-/*footeer*/
+.formcontato__contacto{
+    width: 304px;
+    margin: 0 auto;
+}
+
+.formcontato--esquerda{
+    display: none;
+}
+
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formcontato__input{
+    width: 296px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+    padding: 0 15px;
+
+    font-size:16px;
+    font-weight: 400;
+    font-family: 'raleway';
+}
+
+.formcontato__textarea{
+    width: 296px;
+    height: 133px;
+    border-radius: 4px;
+    border: none;
+    padding: 22px 15px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'raleway';
+}
+
+.formcontato__botao{
+    width: 133px;
+    height: 40px;
+    background-color: #2A7AE4;
+    border: none;
+    
+    color: var(--cor-de-fundo);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.44px;
+    font-family: 'raleway';
+}
+
+/* estilo texto */
+.formcontato__subtext{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.78px;
+}
+
+/*---------- F o o t e e r ----------*/
 
 section.footer{
-   
+   padding: 32px;
+}
+
+.footer__rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__rodape p{
+    margin: 3px;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
 
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
-}
 
 /*Mobile*/
 @media (min-width: 425px) {
@@ -130,3 +372,30 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Footer*/
 
 }
+
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+    /* Menú */
+    .menu{
+        white-space: nowrap;
+    }
+
+    .menu__list{
+        display: flex;
+        gap: 20px;
+    }
+    
+    /*title*/
+    
+    /*Skills*/
+    
+    /*Hobbies*/
+    
+    /*Formación Académica*/
+    
+    /*Experiencia Profesional*/
+    
+    }
